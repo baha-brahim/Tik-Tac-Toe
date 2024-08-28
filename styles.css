@@ -66,7 +66,7 @@ html {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #f5eeea;
+    background-color: #FFFECB;
     justify-content: flex-end;
 }
 
@@ -103,7 +103,7 @@ body {
 
     .player1 {
         flex: 1;
-        background-color: #cc9ab0;
+        background-color: #423E3B;
         display: flex;
         border-radius: 20px;
         padding: 30px;
@@ -128,7 +128,7 @@ body {
         border-radius: 20px;
         padding: 30px;
         justify-content: flex-end;
-        background-color: #965dad;
+        background-color: #5448C8;
         gap: 40px;
 
         .right {
@@ -180,13 +180,13 @@ body {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            background-color: #FF2E00;
             border: #f5eeea 2px solid;
             border-radius: 8px;
             color: white;
             font-family: 'Courier New', Courier, monospace;
             padding: 10px;
             gap: 20px;
-            transition: flex 0.5s ease;
 
             p {
                 flex: 1;
@@ -194,8 +194,14 @@ body {
 
         }
 
-        .drop-down-diff:hover {
+        #diff1:hover ,#diff2:hover {
             flex: 2.5;
+        }   
+        #diff1 {
+            background-color: #423E3B;
+        }
+        #diff2 {
+            background-color: #5448C8;
         }
 
         .drop-down-who {
@@ -209,7 +215,6 @@ body {
             font-family: 'Courier New', Courier, monospace;
             padding: 10px;
             gap: 20px;
-            transition: flex 0.5s ease;
 
             p {
                 flex: 1;
@@ -218,6 +223,7 @@ body {
         }
 
         .drop-down-who:hover {
+            cursor: pointer;
             flex: 2.5;
         }
     }
@@ -226,7 +232,7 @@ body {
     .box .drop-down-diff,
     .box .drop-down-who {
         height: 50px;
-        transition: height 0.5s ease;
+        transition: height 0.5s ease, flex 0.5s ease;
     }
 
     a {
