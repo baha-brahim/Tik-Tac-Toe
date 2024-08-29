@@ -197,10 +197,11 @@ body {
         #diff1:hover ,#diff2:hover {
             flex: 2.5;
         }   
-        #diff1 {
+
+        .drop-color1 {
             background-color: #423E3B;
         }
-        #diff2 {
+        .drop-color2 {
             background-color: #5448C8;
         }
 
