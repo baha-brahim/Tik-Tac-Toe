@@ -26,10 +26,27 @@ window.addEventListener('load', () => {
         var i1 = 0;
         var i2 = 0;
         name.addEventListener('click', () => {
-            console.log(name.classList);
+            if (["I'm playin", "Who's going to play"].includes(document.querySelector('.who1 > p').textContent) && index === 0) {
+                document.querySelector(".down-diff1").classList.add("drop-color1")
+                document.querySelector(".down-diff1").id = "diff1";
+                
+            } else if (!(["I'm playin", "Who's going to play"].includes(document.querySelector('.who1 > p').textContent)) && index === 0) {
+                document.querySelector(".down-diff1").classList.remove("drop-color1")
+                document.querySelector(".down-diff1").id = "";
+            }
+            if (["I'm playin", "Who's going to play"].includes(document.querySelector('.who2 > p').textContent) && index === 1) {
+                document.querySelector(".down-diff2").classList.add("drop-color2");
+                document.querySelector(".down-diff2").id = "diff2";
+
+            } else if (!(["I'm playin", "Who's going to play"].includes(document.querySelector('.who1 > p').textContent)) && index === 1){
+                document.querySelector(".down-diff2").classList.remove("drop-color2");
+                document.querySelector(".down-diff1").id = "";
+
+            }
             if (name.classList.contains("who1")) {
                 document.querySelector('.who1 > p').textContent = players[i1];
                 i1++;
+
             } else {
                 document.querySelector('.who2 > p').textContent = players[i2];
                 i2++;
@@ -50,12 +67,10 @@ window.addEventListener('load', () => {
         var i1 = 0;
         var i2 = 0;
         diff.addEventListener('click', () => {
-            if (diff.classList.contains("diff1")) {
-                document.querySelector('.down-diff1').classList.add('drop-color1');
+            if (diff.id === "diff1") {
                 document.querySelector('.diff1 > p').textContent = ["Low Elo", "Med Elo", "High Elo"][i];
                 i1++;
             } else {
-                document.querySelector('.down-diff2').classList.add('drop-color2');
                 document.querySelector('.diff2 > p').textContent = ["Low Elo", "Med Elo", "High Elo"][i];
                 i2++;
             }
